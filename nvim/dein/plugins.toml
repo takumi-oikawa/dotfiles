@@ -17,10 +17,6 @@ hook_add="""
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-# quickrun
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-
 # pretty statusline/tabline
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -32,6 +28,7 @@ hook_add = '''
 " disable bad plugins
 let g:polyglot_disabled = ['markdown', 'tsx', 'typescript', 'csv']
 " plantuml-syntax
+" :make
 let g:plantuml_executable_script="~/dotfiles/scripts/plantuml"
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
