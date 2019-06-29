@@ -117,9 +117,6 @@ nnoremap x "_x
 nnoremap Q  q
 " Useless command.
 nnoremap M  m
-" Configuration for vim-scala
-au BufRead,BufNewFile *.sbt set filetype=scala
-autocmd FileType json syntax match Comment +\/\/.\+$+
 
 " -------- plugins settings ---------
 call s:load('plugins')
