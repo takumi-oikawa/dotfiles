@@ -1,0 +1,121 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# most recentry used
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+# color scheme
+[[plugins]]
+repo  = 'tomasr/molokai'
+hook_add="""
+    colorscheme molokai
+    let g:molokai_original = 1
+"""
+
+# surround
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# quickrun
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# pretty statusline/tabline
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# -------- language support ----------
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+hook_add = '''
+let g:polyglot_disabled = ['markdown', 'tsx', 'typescript', 'csv']
+'''
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+
+# multi syntax contexts in the same file.
+[[plugins]]
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+hook_add = '''
+  if !exists('g:context_filetype#filetypes')
+    let g:context_filetype#filetypes = {}
+  endif
+'''
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+if = '''executable('node') && executable('yarn')'''
+build = './install.sh nightly'
+merged = '0'
+hook_add = '''
+  " Better display for messages
+  set cmdheight=2
+  " You will have bad experience for diagnostic messages when it's default 4000.
+  set updatetime=300
+  " don't give |ins-completion-menu| messages.
+  set shortmess+=c
+  " always show signcolumns
+  set signcolumn=yes
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+
+  " Use tab for trigger completion with characters ahead and navigate.
+  " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+  inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+  
+  " Use <c-space> to trigger completion.
+  inoremap <silent><expr> <c-space> coc#refresh()
+  
+  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+  " Coc only does snippet and additional edit on confirm.
+  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+  " Use K to show documentation in preview window
+  nnoremap <silent> K :call <SID>show_documentation()<CR>
+  
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    else
+      call CocAction('doHover')
+    endif
+  endfunction
+
+  " Highlight symbol under cursor on CursorHold
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+  
+  " Remap for rename current word
+  nmap <leader>rn <Plug>(coc-rename)
+
+  " Add diagnostic info for https://github.com/itchyny/lightline.vim
+  let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'component_function': {
+        \   'cocstatus': 'coc#status'
+        \ },
+        \ }
+'''
