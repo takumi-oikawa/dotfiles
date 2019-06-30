@@ -55,6 +55,7 @@ set hlsearch
 set completeopt=menuone
 " do not wrap text
 set nowrap
+set display=lastline
 " enable backspace
 set backspace=eol,indent,start
 " show line number and percentage
@@ -84,6 +85,11 @@ set smartindent
 set autoindent
 " tab becomes white spaces
 set expandtab
+" suggestion window size
+set pumheight=10
+" brace match
+set showmatch
+set matchtime=1
 
 " ----------- key mapping --------- 
 "
@@ -94,6 +100,8 @@ inoremap <silent> jj <ESC>
 " move through wrapped one line
 nnoremap j gj
 nnoremap k gk
+" get Y similar to D
+nnoremap Y y$
 " move to prev or next buffer
 map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
