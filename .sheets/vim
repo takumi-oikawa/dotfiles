@@ -1,0 +1,51 @@
+# mark
+mark     : `m[a-zA-Z1-9]`
+jump mark: `'[a-zA-Z1-9]`
+mark: `  :marks`
+
+# basic
+コード整形     : `=`
+行削除&insert  : `S`
+選択単語調べる : `K`
+全行整形       : `gg=G`
+Get Ascii value: `ga`
+
+# 移動
+直近編集箇所に行く  : `g;`
+直近編集箇所から戻る: `g,`
+
+画面ずらしTOP   : `z<enter>`
+画面ずらしMIDDLE: `z.`
+画面ずらしBOTTOM: `z-`
+
+スクロール(画面下): `<ctrl-f>`
+スクロール(画面上): `<ctrl-b>`
+スクロール(行下)  : `<ctrl-e>`
+スクロール(行上)  : `<ctrl-y>`
+
+# 補完
+補完候補（行）: `<ctrl+x><ctrl+l>`
+補完候補（ファイルパス）: `<ctrl+x><ctrl+f>`
+補完候補（単語）: `<ctrl+p>`
+
+# filetype
+filetype設定: `:setf markdown`
+
+# 外部連携
+シェル実行結果vimベタ張り: `:r! command`
+equals to set paste:     : `:a!`
+
+# 選択
+長さ違う複数行に行末挿入: `矩形選択 + $ + A`
+再選択                  : `gv`
+始点終点入れ替え        : `o`
+
+# vimgrep
+vimgrep               : `:vim[grep] {pattern} {file}`
+vimgrep(current dir)  :`:vim {pattern} **`
+vimgrep(dir recursive):`:vim {pattern} app/views/**`
+
+# insert mode
+backspace  : `<ctrl-n>`
+delete word: `<ctrl-w>`
+delete left: `<ctrl-u>`
