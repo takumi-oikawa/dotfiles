@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:$PATH
+export EDITOR=vim
 
 # XDG Base Directory
 export XDG_CONFIG_HOME=$HOME/.config

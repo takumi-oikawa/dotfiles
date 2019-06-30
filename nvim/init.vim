@@ -89,6 +89,8 @@ set expandtab
 "
 " <Leader>をスペースキーにする
 let mapleader = "\<Space>"
+" jj -> <ESC>
+inoremap <silent> jj <ESC>
 " move through wrapped one line
 nnoremap j gj
 nnoremap k gk
