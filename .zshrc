@@ -7,16 +7,11 @@ export XDG_CACHE_HOME=$HOME/.cache
 # vim -> nvim
 alias vim="TERM=xterm-256color nvim"
 
-#ZSH_THEME="daveverwer" 
-plugins=(git)
-
 export LANG=ja_JP.UTF-8
 
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-add-zsh-hook chpwd chpwd_recent_dirs
-
-autoload -Uz colors
-colors
+# add cd hook and cdr
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
+autoload -Uz colors && colors
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -26,11 +21,9 @@ SAVEHIST=1000000
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
-########################################
 # 補完
 # 補完機能を有効にする
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 # ignorecase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -42,11 +35,8 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                    /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
-
-########################################
 # vcs_info
 autoload -Uz vcs_info
-autoload -Uz add-zsh-hook
 
 zstyle ':vcs_info:*' formats '%F{green}(%s)-[%b]%f'
 zstyle ':vcs_info:*' actionformats '%F{red}(%s)-[%b|%a]%f'
@@ -100,7 +90,6 @@ esac
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 
 # fzf vim file open
-# Suppor Only BSD
 function fvim() {
     if git ls-files; then
         git ls-files 2>/dev/null | fzf -m --preview 'head -100 {}'
@@ -109,8 +98,7 @@ function fvim() {
     fi
 }
 
-# peco select history then paste on command line
-# customized from https://github.com/Jxck/dotfiles/blob/master/zsh/peco.zsh
+# Incremental search history
 function fzf-select-history() {
     local tac
     if which tac > /dev/null; then
@@ -123,6 +111,25 @@ function fzf-select-history() {
 }
 zle -N fzf-select-history
 bindkey '^r' fzf-select-history
+
+# Incremental search recent dirs
+function fzf-cdr () {
+  local selected_dir=$(cdr -l | awk '{ print $2 }' | fzf --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    CURSOR=$#BUFFER
+  fi
+}
+zle -N fzf-cdr
+bindkey "^x^q" fzf-cdr
+
+# cd hook
+chpwd() {
+    local ls_lines=$(echo "$ls_result" | wc -l | tr -d ' ')
+    if [ $ls_lines -lt 15 ] && [ $(pwd) != $HOME ]; then
+        ls -G -F
+    fi
+}
 
 # For building andriod
 export ANDROID_HOME=$HOME/Library/Android/sdk
