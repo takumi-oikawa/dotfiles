@@ -17,6 +17,13 @@ hook_add="""
 [[plugins]]
 repo = 'tpope/vim-surround'
 
+# nerdtree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add="""
+map <leader>n :NERDTreeToggle<CR>
+"""
+
 # pretty statusline/tabline
 [[plugins]]
 repo = 'itchyny/lightline.vim'
