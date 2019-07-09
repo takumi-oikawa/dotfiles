@@ -73,11 +73,11 @@ set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
 " Use OS clipboard
 set clipboard=unnamed
 " 自動インデントでずれる幅
-set shiftwidth=4
+set shiftwidth=2
 " 連続した空白に対してタブキーやbackspaceでカーソルが動く幅
-set softtabstop=4
+set softtabstop=2
 " 画面上でタブ文字がしめる幅
-set tabstop=4
+set tabstop=2
 " smart tab & indent
 set smarttab
 set smartindent
