@@ -107,6 +107,14 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 " avoid overwriting register when paste text at visual mode
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
+" search on visual mode
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+function! s:VSetSearch()
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
 " deactivate highlight of search results when push esc key twice
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " w!! でスーパーユーザーとして保存
@@ -127,6 +135,12 @@ nnoremap x "_x
 nnoremap Q  q
 " Useless command.
 nnoremap M  m
+" centering when search
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
 
 " -------- plugins settings ---------
 call s:load('plugins')
