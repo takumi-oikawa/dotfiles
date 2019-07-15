@@ -33,7 +33,7 @@ repo = 'itchyny/lightline.vim'
 repo = 'sheerun/vim-polyglot'
 hook_add = '''
 " disable bad plugins
-let g:polyglot_disabled = ['markdown', 'tsx', 'typescript', 'csv']
+let g:polyglot_disabled = ['markdown', 'csv']
 " plantuml-syntax
 " :make
 let g:plantuml_executable_script="~/dotfiles/scripts/plantuml"
