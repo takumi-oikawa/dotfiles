@@ -51,9 +51,6 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 autocmd FileType json syntax match Comment +\/\/.\+$+
 '''
 
-[[plugins]]
-repo = 'rcmdnk/vim-markdown'
-
 # multi syntax contexts in the same file.
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
