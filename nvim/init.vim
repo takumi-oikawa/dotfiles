@@ -21,6 +21,8 @@ filetype plugin indent on
 " set character code to utf-8
 set fenc=utf-8
 set encoding=utf-8
+" 日本語の文字くずれ直す
+set ambiwidth=double
 " 改行コードの自動判別
 set fileformat=unix
 " □や○文字が崩れる問題を解決

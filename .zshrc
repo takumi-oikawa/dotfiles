@@ -4,6 +4,9 @@ export PATH=/usr/local/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
+# Add PATH
+export PATH=$PATH:$HOME/dotfiles/scripts
+
 # vim -> nvim
 alias vim="TERM=xterm-256color nvim"
 
