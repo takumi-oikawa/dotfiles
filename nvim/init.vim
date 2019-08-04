@@ -131,8 +131,6 @@ cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
-" Better x
-nnoremap x "_x
 " Disable Ex-mode.
 nnoremap Q  q
 " Useless command.
