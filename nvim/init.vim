@@ -18,80 +18,28 @@ endfunction
 
 " --------- general settings ---------
 filetype plugin indent on
-" set character code to utf-8
-set fenc=utf-8
-set encoding=utf-8
-" 日本語の文字くずれ直す
+set fileencoding=utf-8 encoding=utf-8 fileformat=unix
 set ambiwidth=double
-" 改行コードの自動判別
-set fileformat=unix
-" □や○文字が崩れる問題を解決
-set ambiwidth=double
-" 編集中でも別のファイル開ける
-set hidden
-" 高速スクロール支援
-set ttyfast
-" do not save backup and swap files
-set nobackup
-set noswapfile
-set nowritebackup
-" automatically reload file when updated by other application
-set autoread
-" show currently typing command
-set showcmd
-" show current line and column
-set cursorline
-set cursorcolumn
-" show status lines 
-set laststatus=2
-" ignore case when searching on lower cases, but do not on upper case
-set ignorecase
-set smartcase
-" Deal as digits for any numberical object when using <C-x><C-a>
-set nrformats=
-" incremental search
-set incsearch
-" highlight search results
-set hlsearch
-" 補完ウィンドウの設定
-set completeopt=menuone
-" do not wrap text
-set nowrap
-set display=lastline
-" enable backspace
-set backspace=eol,indent,start
-" show line number and percentage
-set ruler
-" show line number
-set number
-" show unvisible character
-set list
-" command history max capacity
-set history=500
-" コマンドラインの補完拡張
-set wildmenu
-set wildmode=list:full
-set wildignore=*.o,*.obj,*.pyc,*.so,*.dll
-" Use OS clipboard
 set clipboard=unnamed
-" 自動インデントでずれる幅
-set shiftwidth=2
-" 連続した空白に対してタブキーやbackspaceでカーソルが動く幅
-set softtabstop=2
-" 画面上でタブ文字がしめる幅
-set tabstop=2
-" smart tab & indent
-set smarttab
-set smartindent
-" autoindent
-set autoindent
-" tab becomes white spaces
-set expandtab
-" suggestion window size
-set pumheight=10
-" brace match
-set showmatch
-set matchtime=1
+set ttyfast
+set hidden
+set nobackup noswapfile nowritebackup
+set autoread
+set showcmd
+set cursorline cursorcolumn
+set laststatus=2
+set ignorecase smartcase
+set nrformats= " disable nrformats=octal,hex
+set incsearch hlsearch
+set completeopt=menuone,preview pumheight=10
+set nowrap linebreak nolist display=lastline
+set backspace=eol,indent,start
+set ruler number
+set history=500
+set wildmenu wildmode=list:full wildignore=*.o,*.obj,*.pyc,*.so,*.dll
+set shiftwidth=2 softtabstop=2 tabstop=2 smarttab expandtab
+set smartindent autoindent
+set showmatch matchtime=1
 
 " ----------- key mapping --------- 
 "
