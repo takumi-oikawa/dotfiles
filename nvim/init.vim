@@ -23,6 +23,7 @@ set ambiwidth=double
 set clipboard=unnamed
 set ttyfast
 set hidden
+set list
 set nobackup noswapfile nowritebackup
 set autoread
 set showcmd
@@ -32,7 +33,7 @@ set ignorecase smartcase
 set nrformats= " disable nrformats=octal,hex
 set incsearch hlsearch
 set completeopt=menuone,preview pumheight=10
-set nowrap linebreak nolist display=lastline
+set wrap display=lastline
 set backspace=eol,indent,start
 set ruler number
 set history=500
