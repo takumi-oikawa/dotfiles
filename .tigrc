@@ -1,0 +1,28 @@
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+bind generic h scroll-left
+bind generic j move-down
+bind generic k move-up
+bind generic l scroll-right
+
+
+bind main g none
+bind generic g none
+bind generic gg move-first-line
+bind main gg move-first-line
+
+bind generic G none
+bind main G none
+bind generic G move-last-line
+bind main G move-last-line
+
+bind main <Space> none
+bind generic <Space> none
+bind generic <Space>g view-grep
+bind main <Space>g view-grep
+
+bind generic <Ctrl-k> next
+bind generic <Ctrl-j> previous
+
+bind generic <Ctrl-f> scroll-page-down
+bind generic <Ctrl-b> scroll-page-up
