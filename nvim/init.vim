@@ -3,11 +3,6 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
-" do not be vi compatibe
-if &compatible
-  set nocompatible
-endif
-
 function! s:load(file) abort
     let s:path = expand('$XDG_CONFIG_HOME/nvim/rc/' . a:file . '.vim')
 
@@ -31,7 +26,7 @@ set cursorline cursorcolumn
 set laststatus=2
 set ignorecase smartcase
 set nrformats= " disable nrformats=octal,hex
-set incsearch hlsearch
+set incsearch hlsearch inccommand=split
 set completeopt=menuone,preview pumheight=10
 set wrap display=lastline
 set backspace=eol,indent,start
@@ -45,7 +40,7 @@ set showmatch matchtime=1
 " ----------- key mapping --------- 
 "
 " <Leader>をスペースキーにする
-let mapleader = "\<Space>"
+let g:mapleader = "\<Space>"
 " jj -> <ESC>
 inoremap <silent> jj <ESC>
 " move through wrapped one line
