@@ -1,5 +1,7 @@
 export PATH=/usr/local/bin:$PATH
 
+KEYTIMEOUT=1
+
 # XDG Base Directory
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache

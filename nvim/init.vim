@@ -13,6 +13,7 @@ endfunction
 
 " --------- general settings ---------
 filetype plugin indent on
+set timeoutlen=1000 ttimeoutlen=0
 set fileencoding=utf-8 encoding=utf-8 fileformat=unix
 set ambiwidth=double
 set clipboard=unnamed
