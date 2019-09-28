@@ -101,5 +101,8 @@ nnoremap g* g*zz
 " open vimrc
 nnoremap <Leader>. :new ~/.config/nvim/init.vim<CR>
 
+inoremap <C-Y> <C-R>=strftime("%Y/%m/%d")<CR>
+inoremap <C-D> <C-R>=strftime("%m/%d")<CR>
+
 " -------- plugins settings ---------
 call s:load('plugins')
