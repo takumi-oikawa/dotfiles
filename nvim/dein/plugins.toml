@@ -48,7 +48,7 @@ let g:polyglot_disabled = ['markdown', 'csv']
 let g:plantuml_executable_script="~/dotfiles/scripts/plantuml"
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
-autocmd FileType json syntax match Comment +\/\/.\+$+
+autocmd initvim FileType json syntax match Comment +\/\/.\+$+
 '''
 
 # multi syntax contexts in the same file.
@@ -118,7 +118,7 @@ hook_add = '''
   endfunction
 
   " Highlight symbol under cursor on CursorHold
-  autocmd CursorHold * silent call CocActionAsync('highlight')
+  autocmd initvim CursorHold * silent call CocActionAsync('highlight')
   
   " Remap for rename current word
   nmap <leader>rn <Plug>(coc-rename)

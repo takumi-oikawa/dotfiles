@@ -1,5 +1,5 @@
 " reset augroup
-augroup MyAutoCmd
+augroup initvim
   autocmd!
 augroup END
 
@@ -37,6 +37,7 @@ set wildmenu wildmode=list:full wildignore=*.o,*.obj,*.pyc,*.so,*.dll
 set shiftwidth=2 softtabstop=2 tabstop=2 smarttab expandtab
 set smartindent autoindent
 set showmatch matchtime=1
+set undolevels=100
 
 " ----------- key mapping --------- 
 "
@@ -50,8 +51,8 @@ nnoremap k gk
 " get Y similar to D
 nnoremap Y y$
 " move to prev or next buffer
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
+noremap <C-J> :bnext<CR>
+noremap <C-K> :bprev<CR>
 " avoid overwriting register when paste text at visual mode
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
 " search on visual mode
@@ -63,9 +64,9 @@ function! s:VSetSearch()
   let @s = temp
 endfunction
 " deactivate highlight of search results when push esc key twice
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 " w!! でスーパーユーザーとして保存
-cmap w!! w !sudo tee > /dev/null %
+cnoremap w!! w !sudo tee > /dev/null %
 " Allow normal CLI shortcut when command mode
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
@@ -86,6 +87,8 @@ nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
+" open vimrc
+nnoremap <Leader>. :new ~/.config/nvim/init.vim<CR>
 
 " -------- plugins settings ---------
 call s:load('plugins')

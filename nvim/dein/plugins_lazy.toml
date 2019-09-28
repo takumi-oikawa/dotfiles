@@ -3,7 +3,7 @@ repo = 'Shougo/denite.nvim'
 depends = ['neomru.vim']
 on_event = 'BufRead'
 hook_add = '''
-    autocmd FileType denite call s:denite_my_settings()
+    autocmd initvim FileType denite call s:denite_my_settings()
     function! s:denite_my_settings() abort
         nnoremap <silent><buffer><expr> <CR>
         \ denite#do_map('do_action')
