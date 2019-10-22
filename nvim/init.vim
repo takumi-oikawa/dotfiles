@@ -39,6 +39,10 @@ set smartindent autoindent
 set showmatch matchtime=1
 set undolevels=100
 
+" ----------- filetype indent -----------
+
+autocmd initvim BufNewFile,BufRead *.elm setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
 " ----------- key mapping --------- 
 "
 " <Leader>をスペースキーにする
