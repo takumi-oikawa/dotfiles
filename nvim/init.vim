@@ -52,6 +52,7 @@ let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
 let g:netrw_preview=1
 let g:netrw_altv=1
 let g:netrw_winsize=20
+nnoremap <leader>n :Ex<CR>
 
 
 " jj -> <ESC>
