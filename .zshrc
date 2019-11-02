@@ -1,6 +1,5 @@
+# brew first
 export PATH=/usr/local/bin:$PATH
-
-KEYTIMEOUT=1
 
 # XDG Base Directory
 export XDG_CONFIG_HOME=$HOME/.config
@@ -8,6 +7,10 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 # Add PATH
 export PATH=$PATH:$HOME/dotfiles/scripts
+
+# lesspipe
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
+export LESS='-R'
 
 # vim -> nvim
 alias vim="TERM=xterm-256color nvim"

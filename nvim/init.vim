@@ -87,6 +87,11 @@ cnoremap <Esc>f <S-Right>
 nnoremap Q  q
 " Useless command.
 nnoremap M  m
+" centering
+nnoremap j jzz
+nnoremap k kzz
+nnoremap ) )zz
+nnoremap ( (zz
 " centering when search
 nnoremap n nzz
 nnoremap N Nzz

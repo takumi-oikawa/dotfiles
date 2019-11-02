@@ -11,3 +11,6 @@ nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
+
+nnoremap j jzz
+nnoremap k kzz
