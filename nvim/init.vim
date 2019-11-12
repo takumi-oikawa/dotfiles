@@ -99,9 +99,9 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 " open vimrc
-nnoremap <Leader>. :new ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 nnoremap <Leader>T :set background=dark<CR>
+nnoremap <Leader>. :e ~/.config/nvim/init.vim<CR>
 
 inoremap <C-Y> <C-R>=strftime("%Y/%m/%d")<CR>
 inoremap <C-D> <C-R>=strftime("%m/%d")<CR>
