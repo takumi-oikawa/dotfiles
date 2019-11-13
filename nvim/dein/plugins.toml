@@ -44,6 +44,10 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 autocmd initvim FileType json syntax match Comment +\/\/.\+$+
 '''
 
+# bats
+[[plugins]]
+repo = 'vim-scripts/bats.vim'
+
 # multi syntax contexts in the same file.
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
