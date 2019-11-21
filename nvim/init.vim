@@ -87,17 +87,6 @@ cnoremap <Esc>f <S-Right>
 nnoremap Q  q
 " Useless command.
 nnoremap M  m
-" centering
-nnoremap j jzz
-nnoremap k kzz
-nnoremap ) )zz
-nnoremap ( (zz
-" centering when search
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
 " open vimrc
 nnoremap <Leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 nnoremap <Leader>T :set background=dark<CR>
