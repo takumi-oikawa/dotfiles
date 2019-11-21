@@ -147,3 +147,6 @@ let g:lightline = {
 
 [[plugins]]
 repo = 'junegunn/goyo.vim'
+
+[[plugins]]
+repo = 'honza/vim-snippets'
