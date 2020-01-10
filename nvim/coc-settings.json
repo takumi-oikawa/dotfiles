@@ -1,5 +1,6 @@
 {
   "tsserver.enableJavascript": true,
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "Markdown"],
   "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"],
   "languageserver": {
     "metals": {
