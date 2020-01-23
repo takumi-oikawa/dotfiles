@@ -14,6 +14,11 @@
       "initializationOptions": {
         "elmAnalyseTrigger": "change"
       }
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
     }
   }
 }

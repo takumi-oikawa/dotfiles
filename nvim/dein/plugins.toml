@@ -43,6 +43,9 @@ let g:plantuml_executable_script="~/dotfiles/scripts/plantuml"
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 autocmd initvim FileType json syntax match Comment +\/\/.\+$+
+" vim-terraform
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
 '''
 
 # bats
