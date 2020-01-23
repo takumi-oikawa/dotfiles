@@ -47,10 +47,24 @@ hook_post_source = '''
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+depends =  ['vim-devicons', 'vim-nerdtree-syntax-highlight']
 hook_add = """
 map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows = 1
+
+
+" dir-icons
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:DevIconsDefaultFolderOpenSymbol = ''
+
+" font
+set guifont=RictyDiscordForPowerline\ Nerd\ Font:h14
 """
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
