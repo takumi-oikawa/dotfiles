@@ -4,13 +4,3 @@ set incsearch hlsearch
 set ignorecase smartcase
 set ideajoin
 set nrformats=
-
-" centering when search
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap * *zz
-nnoremap # #zz
-nnoremap g* g*zz
-
-nnoremap j jzz
-nnoremap k kzz
