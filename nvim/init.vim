@@ -38,6 +38,7 @@ set shiftwidth=2 softtabstop=2 tabstop=2 smarttab expandtab
 set smartindent autoindent
 set showmatch matchtime=1
 set undolevels=100
+set scrolloff=3
 
 " ----------- filetype indent -----------
 
