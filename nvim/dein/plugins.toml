@@ -52,6 +52,10 @@ let g:terraform_fmt_on_save=1
 [[plugins]]
 repo = 'vim-scripts/bats.vim'
 
+# dash
+[[plugins]]
+repo = 'rizzatti/dash.vim'
+
 # multi syntax contexts in the same file.
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
