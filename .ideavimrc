@@ -4,3 +4,5 @@ set incsearch hlsearch
 set ignorecase smartcase
 set ideajoin
 set nrformats=
+
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
