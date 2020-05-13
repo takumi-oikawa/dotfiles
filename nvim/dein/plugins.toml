@@ -56,6 +56,10 @@ repo = 'vim-scripts/bats.vim'
 [[plugins]]
 repo = 'rizzatti/dash.vim'
 
+# csv
+[[plugins]]
+repo = 'mechatroner/rainbow_csv'
+
 # multi syntax contexts in the same file.
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
