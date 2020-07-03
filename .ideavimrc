@@ -6,3 +6,6 @@ set ideajoin
 set nrformats=
 
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
