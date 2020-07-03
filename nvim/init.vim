@@ -93,5 +93,9 @@ nnoremap <Leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 nnoremap <Leader>T :set background=dark<CR>
 nnoremap <Leader>. :e ~/.config/nvim/init.vim<CR>
 
+" move line up and down
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
+
 " -------- plugins settings ---------
 call s:load('plugins')
