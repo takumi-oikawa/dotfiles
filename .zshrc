@@ -141,7 +141,7 @@ function fzf-cdr () {
   fi
 }
 zle -N fzf-cdr
-bindkey "^x^q" fzf-cdr
+bindkey "^@" fzf-cdr
 
 # cd hook
 chpwd() {
