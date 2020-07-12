@@ -143,6 +143,17 @@ function fzf-cdr () {
 zle -N fzf-cdr
 bindkey "^@" fzf-cdr
 
+# fzf + ghq
+function fzf-ghq () {
+  local selected_dir=$(ghq list -p | fzf --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fzf-ghq
+bindkey '^]' fzf-ghq
 # cd hook
 chpwd() {
     local ls_lines=$(echo "$ls_result" | wc -l | tr -d ' ')
