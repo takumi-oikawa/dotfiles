@@ -21,9 +21,14 @@ export LANG=ja_JP.UTF-8
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
 autoload -Uz colors && colors
 
-HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+export HISTFILE=~/.zsh_history
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_NO_STORE
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
 # zle
 bindkey -v
