@@ -112,6 +112,8 @@ case ${OSTYPE} in
         alias ls='ls -F --color=auto'
         ;;
 esac
+# git checkout incremental
+alias fco="git branch | fzf | xargs git checkout"
 
 #######################################
 
