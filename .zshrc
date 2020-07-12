@@ -93,7 +93,7 @@ alias mkdir='mkdir -p'
 alias sudo='sudo '
 
 # rich ls
-alias ll='ls -alFG'
+alias ll='gls -alhFG1v --color=auto --group-directories-first'
 
 # OS 別の設定
 case ${OSTYPE} in
