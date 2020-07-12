@@ -100,18 +100,6 @@ alias sudo='sudo '
 # rich ls
 alias ll='gls -alhFG1v --color=auto --group-directories-first'
 
-# OS 別の設定
-case ${OSTYPE} in
-    darwin*)
-        #Mac用の設定
-        export CLICOLOR=1
-        alias ls='ls -G -F'
-        ;;
-    linux*)
-        #Linux用の設定
-        alias ls='ls -F --color=auto'
-        ;;
-esac
 # git checkout incremental
 alias fco="git branch | fzf | xargs git checkout"
 
