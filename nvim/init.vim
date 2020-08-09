@@ -45,10 +45,9 @@ set scrolloff=3
 autocmd initvim BufNewFile,BufRead *.elm setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 " ----------- key mapping --------- 
-"
-" <Leader>をスペースキーにする
-let g:mapleader = "\<Space>"
 
+" <Leader> = space
+let g:mapleader = "\<Space>"
 
 " jj -> <ESC>
 inoremap <silent> jj <ESC>
@@ -72,7 +71,7 @@ function! s:VSetSearch()
 endfunction
 " deactivate highlight of search results when push esc key twice
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
-" w!! でスーパーユーザーとして保存
+" save as superuser
 cnoremap w!! w !sudo tee > /dev/null %
 " Allow normal CLI shortcut when command mode
 cnoremap <C-p> <Up>
@@ -88,9 +87,10 @@ cnoremap <Esc>f <S-Right>
 nnoremap Q  q
 " Useless command.
 nnoremap M  m
-" open vimrc
+" get window transparent
 nnoremap <Leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 nnoremap <Leader>T :set background=dark<CR>
+" open vimrc
 nnoremap <Leader>. :e ~/.config/nvim/init.vim<CR>
 
 " move line up and down

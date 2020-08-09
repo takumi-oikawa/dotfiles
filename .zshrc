@@ -36,6 +36,7 @@ export LANG=ja_JP.UTF-8
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
 autoload -Uz colors && colors
 
+# history
 export HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -64,8 +65,7 @@ bindkey -M viins "^W" backward-kill-word
 PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 %# "
 
-# 補完
-# 補完機能を有効にする
+# completion
 autoload -Uz compinit && compinit
 
 # ignorecase
@@ -108,6 +108,7 @@ setopt hist_reduce_blanks
 setopt extended_glob
 
 ########################################
+# always --parent options
 alias mkdir='mkdir -p'
 
 # Enable command alias after sudo
@@ -169,6 +170,7 @@ function fzf-ghq () {
 }
 zle -N fzf-ghq
 bindkey '^]' fzf-ghq
+
 # cd hook
 chpwd() {
     local ls_lines=$(echo "$ls_result" | wc -l | tr -d ' ')
@@ -181,7 +183,7 @@ chpwd() {
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
-# virtualenv wrapper initial shell on OS junction
+# virtualenv wrapper
 export WORKON_HOME=~/.virtualenvs
 
 # java8
