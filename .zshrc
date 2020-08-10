@@ -115,10 +115,16 @@ alias mkdir='mkdir -p'
 alias sudo='sudo '
 
 # rich ls
-alias ll='gls -alhFG1v --color=auto --group-directories-first'
+alias ll='ls -alhFG1v --color=auto --group-directories-first'
 
 # git checkout incremental
 alias fco="git branch | fzf | xargs git checkout"
+
+# always colored grep
+alias grep='grep --color=auto'
+
+# always colored ls
+alias ls='ls -F --color=auto'
 
 #######################################
 
