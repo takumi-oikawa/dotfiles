@@ -145,12 +145,4 @@ chpwd() {
     fi
 }
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-
-export WORKON_HOME=~/.virtualenvs
-
-export JAVA_HOME=`/usr/libexec/java_home -v "1.8"`
-PATH=${JAVA_HOME}/bin:${PATH}
-
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+[ -f $DOTFILES_PATH/zsh/env.zsh ] && source $DOTFILES_PATH/zsh/env.zsh
