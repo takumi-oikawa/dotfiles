@@ -8,11 +8,6 @@ export DOTFILES_PATH=$HOME/dotfiles
 
 source $DOTFILES_PATH/zsh/prefer-gnu.zsh
 
-export LESSOPEN="| src-hilite-lesspipe.sh %s"
-export LESS='-R'
-
-alias vim="TERM=xterm-256color nvim"
-
 export LANG=ja_JP.UTF-8
 
 
