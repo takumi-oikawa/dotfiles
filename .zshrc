@@ -101,7 +101,6 @@ setopt ignore_eof
 setopt interactive_comments
 setopt auto_cd
 setopt pushd_ignore_dups
-setopt share_history
 setopt extended_glob
 
 ########################################
