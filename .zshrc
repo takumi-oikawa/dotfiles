@@ -11,9 +11,6 @@ source $DOTFILES_PATH/zsh/prefer-gnu.zsh
 export LANG=ja_JP.UTF-8
 
 
-autoload -Uz colors && colors
-
-
 export HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
