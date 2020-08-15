@@ -15,7 +15,7 @@ alias vim="TERM=xterm-256color nvim"
 
 export LANG=ja_JP.UTF-8
 
-autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
+
 autoload -Uz colors && colors
 
 
@@ -52,6 +52,10 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                    /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*' verbose yes
 
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook && add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-default true
+zstyle ':chpwd:*' recent-dirs-max 1000
+zstyle ':chpwd:*' recent-dirs-file "$XDG_CACHE_HOME/chpwd-recent-dirs"
 
 source $DOTFILES_PATH/zsh/prompt.zsh
 
