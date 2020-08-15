@@ -59,7 +59,6 @@ zstyle ':chpwd:*' recent-dirs-file "$XDG_CACHE_HOME/chpwd-recent-dirs"
 
 source $DOTFILES_PATH/zsh/prompt.zsh
 
-
 setopt print_eight_bit
 setopt no_beep
 setopt no_flow_control
@@ -69,20 +68,6 @@ setopt auto_cd
 setopt pushd_ignore_dups
 setopt extended_glob
 
-
-alias mkdir='mkdir -p'
-
-alias sudo='sudo '
-
-alias ll='ls -alhFG1v --color=auto --group-directories-first'
-
-alias fco="git branch | fzf | xargs git checkout"
-
-alias grep='grep --color=auto'
-
-alias ls='ls -F --color=auto'
-
 source $DOTFILES_PATH/zsh/incremental-search.zsh
-
 
 [ -f $DOTFILES_PATH/zsh/env.zsh ] && source $DOTFILES_PATH/zsh/env.zsh
