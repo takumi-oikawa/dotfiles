@@ -1,4 +1,3 @@
-" reset augroup
 augroup initvim
   autocmd!
 augroup END
@@ -46,21 +45,21 @@ autocmd initvim BufNewFile,BufRead *.elm setlocal tabstop=4 softtabstop=4 shiftw
 
 " ----------- key mapping --------- 
 
-" <Leader> = space
 let g:mapleader = "\<Space>"
 
-" jj -> <ESC>
 inoremap <silent> jj <ESC>
-" move through wrapped one line
+
 nnoremap j gj
 nnoremap k gk
-" get Y similar to D
+
 nnoremap Y y$
-" move to prev or next buffer
+
 noremap <C-J> :bnext<CR>
 noremap <C-K> :bprev<CR>
+
 " avoid overwriting register when paste text at visual mode
 xnoremap <expr> p 'pgv"'.v:register.'y`>'
+
 " search on visual mode
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 function! s:VSetSearch()
@@ -69,11 +68,11 @@ function! s:VSetSearch()
   let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
   let @s = temp
 endfunction
-" deactivate highlight of search results when push esc key twice
+
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
-" save as superuser
+
 cnoremap w!! w !sudo tee > /dev/null %
-" Allow normal CLI shortcut when command mode
+
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 cnoremap <C-b> <Left>
@@ -83,14 +82,13 @@ cnoremap <C-e> <End>
 cnoremap <C-d> <Del>
 cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
-" Disable Ex-mode.
+
 nnoremap Q  q
-" Useless command.
 nnoremap M  m
-" get window transparent
+
 nnoremap <Leader>t :hi Normal guibg=NONE ctermbg=NONE<CR>
 nnoremap <Leader>T :set background=dark<CR>
-" open vimrc
+
 nnoremap <Leader>. :e ~/.config/nvim/init.vim<CR>
 
 " move line up and down
