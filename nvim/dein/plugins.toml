@@ -5,22 +5,9 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
 
-# color scheme
-[[plugins]]
-repo  = 'morhetz/gruvbox'
-hook_add="""
-colorscheme gruvbox
-set t_Co=256
-let g:lightline = { 'colorscheme': 'gruvbox' }
-"""
-
 # surround
 [[plugins]]
 repo = 'tpope/vim-surround'
-
-# pretty statusline/tabline
-[[plugins]]
-repo = 'itchyny/lightline.vim'
 
 # easy text align
 [[plugins]]
@@ -145,7 +132,6 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
