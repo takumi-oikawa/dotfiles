@@ -61,9 +61,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
 repo = 'neoclide/coc.nvim'
 if = '''executable('node') && executable('yarn')'''
 build = './install.sh nightly'
