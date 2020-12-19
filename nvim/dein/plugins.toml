@@ -129,17 +129,6 @@ autocmd initvim CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
-
-" Add diagnostic info for https://github.com/itchyny/lightline.vim
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
-      \ },
-      \ }
 '''
 
 [[plugins]]
