@@ -2,6 +2,7 @@ let s:dein_dir = expand('$XDG_CACHE_HOME/dein')
 
 if &runtimepath !~# '/dein.vim'
     let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+    let g:dein#auto_recache = 1
 
     " Auto Download
     if !isdirectory(s:dein_repo_dir)
