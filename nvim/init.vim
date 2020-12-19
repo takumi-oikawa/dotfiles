@@ -22,7 +22,6 @@ set list
 set nobackup noswapfile nowritebackup
 set autoread
 set showcmd
-set cursorline cursorcolumn
 set laststatus=2
 set ignorecase smartcase
 set nrformats= " disable nrformats=octal,hex
