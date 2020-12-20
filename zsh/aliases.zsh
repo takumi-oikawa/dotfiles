@@ -1,5 +1,3 @@
-alias vim="TERM=xterm-256color nvim"
-
 alias mkdir='mkdir -p'
 
 alias sudo='sudo '
