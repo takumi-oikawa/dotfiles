@@ -15,6 +15,8 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
 Plug 'mechatroner/rainbow_csv'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 "
@@ -33,3 +35,5 @@ nmap ga <Plug>(EasyAlign)
 au BufRead,BufNewFile *.sbt set filetype=scala
 
 autocmd vimrc FileType json syntax match Comment +\/\/.\+$+
+
+source $HOME/dotfiles/vim/coc.vim
