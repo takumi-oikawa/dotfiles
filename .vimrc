@@ -60,3 +60,8 @@ cnoremap <Esc>f <S-Right>
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
 
+" --------- plugin settings ---------
+
+if filereadable(expand('$HOME/dotfiles/vim/plugins.vim'))
+  source $HOME/dotfiles/vim/plugins.vim
+endif
