@@ -15,6 +15,8 @@ Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 
 Plug 'mechatroner/rainbow_csv'
 
+Plug 'honza/vim-snippets'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
