@@ -38,4 +38,8 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 
 autocmd vimrc FileType json syntax match Comment +\/\/.\+$+
 
+"
+" ------ coc-nvim ------
+"
+
 source $HOME/dotfiles/vim/coc.vim
