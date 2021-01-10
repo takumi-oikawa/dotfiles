@@ -5,8 +5,7 @@ Plug 'tpope/vim-surround'
 
 Plug 'junegunn/vim-easy-align'
 
-" disable bad plugins
-let g:polyglot_disabled = ['markdown', 'csv']
+let g:polyglot_disabled = ['markdown', 'csv', 'javascript']
 Plug 'sheerun/vim-polyglot'
 
 Plug 'vim-scripts/bats.vim'
