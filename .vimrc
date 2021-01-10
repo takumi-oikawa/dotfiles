@@ -29,6 +29,7 @@ set smartindent autoindent
 set showmatch matchtime=1
 set undolevels=100
 set scrolloff=3
+set mouse=n
 
 " ----------- key mapping --------- 
 let g:mapleader = "\<Space>"
