@@ -1,3 +1,6 @@
+" popup color
+highlight CocHintFloat ctermfg=Red  guifg=#ff0000
+highlight CocErrorFloat ctermbg=gray ctermfg=0
 " Global extension names to install when they aren't installed,
 let g:coc_global_extensions = [
   \ 'coc-snippets',
