@@ -44,3 +44,6 @@ function fzf-ghq () {
 zle -N fzf-ghq
 bindkey '^]' fzf-ghq
 
+
+alias gco='git checkout $(git branch -a | tr -d " " | fzf --preview "git log --color=always {}")'
+
