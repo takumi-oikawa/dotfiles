@@ -49,3 +49,4 @@ source $DOTFILES_PATH/zsh/appearance.zsh
 source $DOTFILES_PATH/zsh/incremental-search.zsh
 source $DOTFILES_PATH/zsh/aliases.zsh
 [ -f $DOTFILES_PATH/zsh/env.zsh ] && source $DOTFILES_PATH/zsh/env.zsh
+fpath+=$HOME/.zsh_functions

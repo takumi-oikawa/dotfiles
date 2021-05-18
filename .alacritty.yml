@@ -1,0 +1,5 @@
+font:
+  size: 14.0
+key_bindings:
+  - { key: Semicolon,    mods: Command|Shift,     action: IncreaseFontSize               }
+  - { key: Minus,        mods: Command|Shift,     action: DecreaseFontSize               }
